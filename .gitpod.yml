@@ -7,14 +7,12 @@ tasks:
   - name: kernel dev environment
     init: |
       sudo cat <<EOF >/etc/apt/sources.list
-deb http://it.archive.ubuntu.com/ubuntu/ impish main universe restricted multiverse
-deb-src http://it.archive.ubuntu.com/ubuntu/ impish main universe restricted multiverse
-
-deb http://security.ubuntu.com/ubuntu impish-security main universe restricted multiverse
-deb-src http://security.ubuntu.com/ubuntu impish-security main universe restricted multiverse
-
-deb http://it.archive.ubuntu.com/ubuntu/ impish-updates main universe restricted multiverse
-deb-src http://it.archive.ubuntu.com/ubuntu/ impish-updates main universe restricted multiverse
+      deb http://it.archive.ubuntu.com/ubuntu/ impish main universe restricted multiverse
+      deb-src http://it.archive.ubuntu.com/ubuntu/ impish main universe restricted multiverse
+      deb http://security.ubuntu.com/ubuntu impish-security main universe restricted multiverse
+      deb-src http://security.ubuntu.com/ubuntu impish-security main universe restricted multiverse
+      deb http://it.archive.ubuntu.com/ubuntu/ impish-updates main universe restricted multiverse
+      deb-src http://it.archive.ubuntu.com/ubuntu/ impish-updates main universe restricted multiverse
       EOF
       sudo apt update -y
       sudo apt install qemu qemu-system-x86 qemu-utils linux-headers-5.13.0-1007-gcp libguestfs-tools sshpass netcat -y
