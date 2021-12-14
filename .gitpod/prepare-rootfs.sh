@@ -1,5 +1,6 @@
 #!/bin/bash
-
+export LIBGUESTFS_DEBUG=1
+export LIBGUESTFS_TRACE=1
 set -euo pipefail
 
 img_url="https://cloud-images.ubuntu.com/hirsute/current/hirsute-server-cloudimg-amd64.tar.gz"
